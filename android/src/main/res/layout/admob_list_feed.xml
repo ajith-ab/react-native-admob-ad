@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/ad_view_feed"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:visibility="invisible"
+  >
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/ad_bg_color"
+    android:id="@+id/ad_feed_main_container"
+    >
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="5dp"
+      >
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+          android:id="@+id/adv_feed_icon"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:adjustViewBounds="true"
+          android:padding="5dp"
+          android:scaleType="fitXY"
+          />
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+          <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the Ad Setting"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/ad_heading_color"
+            android:id="@+id/ad_feed_headline" />
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+              android:layout_width="217dp"
+              android:orientation="vertical"
+              android:layout_height="wrap_content">
+              <TextView
+                android:id="@+id/ad_feed_body"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text=" This is the Ad Setting "
+                android:textColor="@color/ad_text_body_color"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <include layout="@layout/admobnativead" />
+                <TextView
+                  android:id="@+id/ad_feed_advertiser"
+                  android:layout_width="168dp"
+                  android:layout_height="wrap_content"
+                  android:text="This is the Ad Setting"
+                  android:textColor="@color/ad_text_body_color"
+                  android:textSize="12dp"
+                  android:textStyle="bold" />
+              </LinearLayout>
+            </LinearLayout>
+            <Button
+              android:id="@+id/call_to_feed_action"
+              android:layout_width="wrap_content"
+              android:layout_height="16dp"
+              android:layout_centerHorizontal="true"
+              android:layout_marginLeft="20dp"
+              android:background="@drawable/button"
+              android:elevation="10dp"
+              android:stateListAnimator="@null"
+              android:text="Install Now"
+              android:translationZ="1dp" />
+          </LinearLayout>
+        </LinearLayout>
+      </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+
+
+</com.google.android.gms.ads.nativead.NativeAdView>
